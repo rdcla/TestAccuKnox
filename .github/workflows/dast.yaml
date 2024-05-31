@@ -34,7 +34,7 @@ jobs:
 
           sudo chmod -R 777 ${{ github.workspace }}
 
-          echo "TARGET_URL=https://risasdental.com/" >> $GITHUB_ENV
+          echo "TARGET_URL=https://risasdental.com" >> $GITHUB_ENV
  
       - name: OWASP ZAP Scan
 
