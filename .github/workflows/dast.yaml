@@ -33,7 +33,7 @@ jobs:
         run: |
 
           sudo chmod -R 777 ${{ github.workspace }}
-          echo "TARGET_URL=https://ginandjuice.shop/" >> $GITHUB_ENV
+          echo "TARGET_URL=https://risasdental.com/" >> $GITHUB_ENV
       - name: OWASP ZAP Scan
         run: |
           docker run --rm -v ${{ github.workspace }}:/zap/wrk/:rw -t zaproxy/zap-stable zap-baseline.py \
