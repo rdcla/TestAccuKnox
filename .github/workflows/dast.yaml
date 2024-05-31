@@ -1,3 +1,4 @@
+[8:45 AM] Udit Uniyal (Unverified)
 name: OWASP ZAP Scanning Workflow
  
 on:
@@ -34,7 +35,7 @@ jobs:
 
           sudo chmod -R 777 ${{ github.workspace }}
 
-          echo "TARGET_URL=https://risasdental.com" >> $GITHUB_ENV
+          echo "TARGET_URL=https://ginandjuice.shop/" >> $GITHUB_ENV
  
       - name: OWASP ZAP Scan
 
@@ -66,10 +67,10 @@ jobs:
 
             cd ${GITHUB_WORKSPACE}
 
-            curl --location --request POST "https://cspm.demo.accuknox.com/api/v1/artifact/?tenant_id=3136&data_type=ZAP&save_to_s3=false" \
+            curl --location --request POST "https://cspm.demo.accuknox.com/api/v1/artifact/?tenant_id=167&data_type=ZAP&save_to_s3=false" \
 
-              --header "Tenant-Id: 3136" \
+              --header "Tenant-Id: 167" \
 
-              --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NzYzMjY0LCJqdGkiOiIwZWMwNjQ1YzU3Yjc0Mjk0YjA4N2ZhNzVhYTkyY2VlNyIsImlzcyI6ImNzcG0uZGVtby5hY2N1a25veC5jb20ifQ.frLYCUfkgyOw1yZMTMKo7PdB_OjBk7O9WhnJxIsLnaV3CHQAHcBnmZ-MZ33qjxJPZEbMRC5bWjALxrVS6nOekcXFvlz33EF3EJNgDIJ2vj_IJZ7rGfhQtypn_ZjNkYf72JFpCN6Y0U5_EQCvhdobUEwgb6N1VxzwAF96lX7PiVg9xv8trKN3DDvSF3bjM3wnHU-WqgffdQWs4bst0gVO5jXHlW9noySdO-r6ZlZ5_Ro0N5zXYvC0J2HoxOtmOCJEtoi_iQeyza8BHvId540DEsj-k-EwjRZVYgu6LlxNhjcJ0AiaCKY28pDlD4ElzrMo60XgWwNL9_NEn8mOootySQ" \
+              --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NzU5NzkxLCJqdGkiOiI2MWYxYjQ0NjhkZDM0MTMzYjdkM2Q1MTUwMTM5ZWFjZiIsImlzcyI6ImNzcG0uZGVtby5hY2N1a25veC5jb20ifQ.Tv4TRMjPvuNC6uTaWg9JSpnTf7uSsqMJubd_qh9uyr3h_CQE9oAuYc0_k7J8WAdLNos4rwH4s2ng2yHU74MQ-3auJ_hRc4fUPcNvb6HiSBkmLexufn4I2yxHkvOS_uevrViI0n_uY1fgMgyKTwy_HlTMrS6RDQATNFjaV1ZsIOa5fDcAtYMBj3S_IFGoEm-Nv6zO_03JIwDy7eR5crd7O55C-76-XAeMsi4ZkCHKkr6im-64edpariylaPdl5jqlStqaz1iScKC6RPO3CJ7iGFCZ2PVYFiacVX-M7hXOeakQv0X9pC1fs9anmpCa3AYM31FZe4hfj41YuURZGkzuNA" \
 
               --form "file=@\"scanreport.json\""
